@@ -8,7 +8,7 @@ angular.module('meuApp', ['ui.router'])
     })
     .state('main.home', {
         url: '/',
-        templateUrl: 'app/views/home.htm',
+        templateUrl: 'app/views/home.html',
         controller: 'testeController'
     })
     .state('login', {
