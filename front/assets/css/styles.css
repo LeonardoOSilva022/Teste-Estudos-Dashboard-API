@@ -1,0 +1,163 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: linear-gradient(120deg, #ffffff, #e5e5e5);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #007bff; /* Azul vivo */
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 40px; /* Ajustado para se alinhar com a sidebar */
+  transition: margin-left 0.3s ease;
+}
+
+header .logo.shifted {
+  margin-left: 0;
+}
+
+header .login a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.sidebar {
+  width: 250px;
+  background: #0056b3; /* Azul escuro */
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Escondida inicialmente */
+  height: 100vh;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar nav ul {
+  margin-top: 4rem; /* Espaço extra para evitar sobreposição do botão */
+}
+
+.sidebar nav ul li {
+  margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  transition: background 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background: #007bff;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 0px; /* Ajustado para alinhar ao tamanho da sidebar */
+  transition: margin-left 0.3s ease;
+}
+
+.content.shifted {
+  margin-left: 0;
+}
+
+.product-gallery {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h2 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.product-card button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #007bff;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
