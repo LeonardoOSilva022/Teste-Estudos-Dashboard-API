@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="meuApp">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tela de Login</title>
-  <link rel="stylesheet" href="../../assets/css/stylesLogin.css">
+  <link rel="stylesheet" href="assets/css/stylesLogin.css">
 </head>
-<body>
+<body class="login-page">
   <div class="login-container">
     <div class="login-card">
       <h1>Bem-vindo</h1>
@@ -23,7 +23,7 @@
         <button type="button" class="btn-login" ng-click="logar()">Entrar</button>
       </form>
       <div class="login-footer">
-        <p>Não tem conta? <a href="#">Registre-se</a></p>
+        <p>Não tem conta? <a ui-sref="register">Registre-se</a></p>
       </div>
     </div>
   </div>

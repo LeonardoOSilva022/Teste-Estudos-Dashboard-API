@@ -1,40 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comércio Online</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-
-<script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
-
-<script src="app/app.js"></script>
-<script src="app/routes.js"></script>
-<script src="app/controllers/controller.js"></script>
-<script src="app/controllers/LoginController.js"></script>
-</head>
 <body>
   <header>
-    <div class="logo">Majestic Store</div>
-    <div class="login">
-      <a ui-sref="login">Login</a> | <a href="#">Cadastro</a>
+    <div class="user-info">
+      <span>Usuário logado: {{usuario.name}}</span>
+      <button class="logout-btn" ui-sref="deslogar">Deslogar</button>
     </div>
   </header>
 
   <div class="container">
-    <!-- Botão de Menu -->
-    <button class="menu-toggle" id="menuToggle">☰</button>
-
-    <!-- Sidebar -->
+    <!-- Sidebar Estática -->
     <aside class="sidebar" id="sidebar">
+      <h2>Menu</h2> <!-- Título da sidebar -->
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Produtos</a></li>
-          <li><a href="#">Categorias</a></li>
-          <li><a href="#">Sobre Nós</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a ui-sref="#">Home</a></li>
+          <li><a ui-sref="#">Produtos</a></li>
+          <li><a ui-sref="#">Categorias</a></li>
+          <li><a ui-sref="#">Sobre Nós</a></li>
+          <li><a ui-sref="#">Contato</a></li>
         </ul>
       </nav>
     </aside>
@@ -71,7 +53,4 @@
   <footer>
     <p>© 2024 Majestic Store. Todos os direitos reservados.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
-</html>

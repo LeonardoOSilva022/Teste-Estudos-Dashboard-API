@@ -1,5 +1,4 @@
 /* Reset básico */
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -8,49 +7,36 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  display: grid;
-  place-items: center; /* Centraliza horizontal e verticalmente */
-  height: 100vh; /* Garante altura total */
-  margin: 0;
-}
-
-body.login-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Para evitar quebra em alguns navegadores */
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  height: 100vh;
+  margin: 0;
   color: #fff;
 }
 
-.login-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%; /* Permite adaptação a telas pequenas */
-  max-width: 420px; /* Aumenta a largura máxima */
-  padding: 1.5rem; /* Adiciona espaçamento ao redor */
+.register-container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 1.5rem;
 }
 
-.login-card {
+.register-card {
   background: #fff;
   color: #333;
-  width: 100%;
-  max-width: 400px; /* Define uma largura máxima */
-  min-width: 300px; /* Opcional: define uma largura mínima */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-.login-card h1 {
+.register-card h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.login-card p {
+.register-card p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -68,7 +54,7 @@ body.login-page {
 }
 
 .input-group input {
-  width: 100%; /* Garante que o input respeita o tamanho do pai */
+  width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
   border: 1px solid #ddd;
@@ -76,13 +62,12 @@ body.login-page {
   transition: border-color 0.3s;
 }
 
-
 .input-group input:focus {
   border-color: #007bff;
   outline: none;
 }
 
-.btn-login {
+.btn-register {
   background: #007bff;
   color: #fff;
   padding: 0.8rem 1rem;
@@ -94,20 +79,20 @@ body.login-page {
   transition: background 0.3s;
 }
 
-.btn-login:hover {
+.btn-register:hover {
   background: #0056b3;
 }
 
-.login-footer {
+.register-footer {
   margin-top: 1.5rem;
 }
 
-.login-footer a {
+.register-footer a {
   color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }
 
-.login-footer a:hover {
+.register-footer a:hover {
   text-decoration: underline;
 }

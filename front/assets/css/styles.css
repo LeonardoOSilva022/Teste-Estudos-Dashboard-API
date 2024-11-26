@@ -11,12 +11,13 @@ body {
   background: linear-gradient(120deg, #ffffff, #e5e5e5);
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #007bff; /* Azul vivo */
+  background: #007bff;
   color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -24,60 +25,56 @@ header {
   top: 0;
 }
 
-header .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-left: 40px; /* Ajustado para se alinhar com a sidebar */
-  transition: margin-left 0.3s ease;
-}
-
-header .logo.shifted {
-  margin-left: 0;
-}
-
-header .login a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.container {
+header .user-info {
+  margin-left: auto; /* Alinha as informações para a direita */
   display: flex;
-  position: relative;
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre o texto e o botão */
 }
 
-.menu-toggle {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  background: #007bff;
+header .user-info span {
+  font-size: 1rem;
+  color: #fff;
+}
+
+header .logout-btn {
+  background: #ff4d4d; /* Cor do botão */
   color: #fff;
   border: none;
-  font-size: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 1100;
+  transition: background 0.3s;
 }
 
+header .logout-btn:hover {
+  background: #cc0000; /* Cor ao passar o mouse */
+}
+
+/* Sidebar */
 .sidebar {
   width: 250px;
-  background: #0056b3; /* Azul escuro */
-  padding: 1rem;
+  background: #0056b3;
+  padding: 2rem 1rem 1rem 1rem;
+  height: 100vh;
   position: fixed;
   top: 0;
-  left: -250px; /* Escondida inicialmente */
-  height: 100vh;
-  transition: left 0.3s ease;
+  left: 0;
   z-index: 1000;
+  border-right: 3px solid #007bff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar.open {
-  left: 0;
+.sidebar h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .sidebar nav ul {
-  margin-top: 4rem; /* Espaço extra para evitar sobreposição do botão */
+  margin-top: 1rem;
 }
 
 .sidebar nav ul li {
@@ -87,24 +84,32 @@ header .login a {
 .sidebar nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.8rem 1rem;
   display: block;
-  transition: background 0.3s;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background 0.3s, border-color 0.3s;
 }
 
 .sidebar nav ul li a:hover {
   background: #007bff;
+  border-color: #fff;
 }
 
+.sidebar nav ul li a:active {
+  background: #0056b3;
+}
+
+.sidebar nav ul li a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Conteúdo Principal */
 .content {
   flex: 1;
   padding: 2rem;
-  margin-left: 0px; /* Ajustado para alinhar ao tamanho da sidebar */
-  transition: margin-left 0.3s ease;
-}
-
-.content.shifted {
-  margin-left: 0;
+  margin-left: 250px;
 }
 
 .product-gallery {
@@ -151,6 +156,7 @@ header .login a {
   background: #0056b3;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
