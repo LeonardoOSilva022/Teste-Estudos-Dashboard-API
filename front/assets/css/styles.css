@@ -5,10 +5,20 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden; /* Remove a rolagem padrão */
+}
+
 body {
   font-family: 'Arial', sans-serif;
   color: #333;
   background: linear-gradient(120deg, #ffffff, #e5e5e5);
+}
+
+.container {
+  display: flex;
+  height: 100%; /* Garante que o container ocupa toda a altura da tela */
 }
 
 /* Header */
@@ -30,6 +40,31 @@ header .user-info {
   display: flex;
   align-items: center;
   gap: 1rem; /* Espaçamento entre o texto e o botão */
+}
+
+header .user-management {
+  margin-left: 1rem; /* Ajuste de espaçamento */
+}
+
+header .user-management-btn i {
+  font-size: 1rem; /* Tamanho do ícone */
+}
+
+header .user-management-btn:hover {
+  background: #218838;
+}
+
+header .user-management-btn {
+  background: #28a745; /* Verde para contraste */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaço entre ícone e texto */
+  transition: background 0.3s;
 }
 
 header .user-info span {
@@ -110,6 +145,8 @@ header .logout-btn:hover {
   flex: 1;
   padding: 2rem;
   margin-left: 250px;
+  overflow: auto;
+  padding-bottom: 2rem;
 }
 
 .product-gallery {

@@ -2,7 +2,14 @@
   <header>
     <div class="user-info">
       <span>Usuário logado: {{usuario.name}}</span>
-      <button class="logout-btn" ui-sref="deslogar">Deslogar</button>
+      <button class="logout-btn" ui-sref="deslogar">Deslogar
+        <i class="fa-solid fa-door-open"></i>
+      </button>
+    </div>
+    <div class="user-management">
+      <button class="user-management-btn" ui-sref="gerenciarUsuarios" title="Gerenciar Usuários">
+        <i class="fas fa-user-cog"></i> Gerenciar Usuários
+      </button>
     </div>
   </header>
 
