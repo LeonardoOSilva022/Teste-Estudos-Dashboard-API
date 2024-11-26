@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="user-info">
+            <span>Usário Logado:{{usuario.name}}</span>
+            <button class="logout-btn" ui-sref="deslogar">
+             <i class="fa-solid fa-door-open"></i>Deslogar
+            </button>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Gerenciamento de Usuários</h1>
+        <div class="user-actions">
+            <button class="add-user-btn" ng-click="salvarInfo()">
+                <i class="fas fa-user-plus"></i> Adicionar Usuário
+            </button>
+        </div>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in contatos">
+                    <td>{{item.id}}</td>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.email}}</td>
+                    <td>
+                        <button class="edit-btn" ng-click="$parent.editar(item.id)">
+                            <i class="fas fa-edit"></i> Editar
+                        </button>
+
+                        <button class="delete-btn" ng-click="$parent.delete(item.id)">
+                            <i class="fas fa-trash"></i> Excluir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody ng-show="contatos.length == 0">
+                <tr>
+                    <td colspan="6"> Não existem dados cadastrados
+                    </td>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <p>© 2024 Majestic Store. Todos os direitos reservados.</p>
+      </footer>
+</body>
+</html>

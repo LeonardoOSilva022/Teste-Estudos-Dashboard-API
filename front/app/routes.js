@@ -27,6 +27,11 @@ angular.module('meuApp', ['ui.router'])
         templateUrl: 'app/views/register.html',
         controller: 'RegistreSeController' 
     })
+    .state('gerenciar', {
+        url: '/usuarios',
+        templateUrl: 'app/views/gerenciarUsuarios.html',
+        controller: 'GerenciarController'
+    })
 
     $urlRouterProvider.otherwise('/');
 });
